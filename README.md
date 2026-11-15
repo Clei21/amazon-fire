@@ -5,7 +5,7 @@ A harmonized fire calendar built from NASA FIRMS active fire detections (MODIS a
 NASA Space Apps Challenge 2026, challenge **Harmonization of MODIS and VIIRS Hot Spots**.
 Team Amazon Fire Calendar, Manaus, Brazil: Leonor Joana Ramos Oliveira, Cleidiana Manoel Alves, Cristiana do Nascimento Pedrosa and Josué Rique Oliveira Roberto.
 
-**Live app:** [site link] · **Repository:** [repository link]
+**Live app:** [clei21.github.io/amazon-fire-calendar](https://clei21.github.io/amazon-fire-calendar/) · **Repository:** [github.com/Clei21/amazon-fire-calendar](https://github.com/Clei21/amazon-fire-calendar)
 
 ## What it does
 
