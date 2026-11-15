@@ -65,9 +65,9 @@ Validation (mean yearly error on held-out years):
 | `construir_app.py` | Builds `index.html` from `app/` and embeds a set of FIRMS CSV files. |
 | `baixar_firms.py` | Optional downloader for the FIRMS API (needs a free MAP_KEY). |
 | `dados/` | NASA FIRMS files used (archive and near real-time; MODIS C6.1, VIIRS Suomi NPP, VIIRS NOAA-20). |
-| `resultados_manaus/`, `resultados_area_total/` | Outputs of `harmonizar.py`. |
-| `docs/` | Full article (English). |
-| `dados_demo/` | Synthetic data in the FIRMS format, used to test the pipeline. |
+| `resultados_manaus/`, `resultados_area_total/` | Outputs of `harmonizar.py` for the Manaus metropolitan area and for the whole downloaded area. |
+| `docs/` | Full article. |
+| `dados_demo/` | Synthetic data in the FIRMS format, used to test the pipeline (`python3 harmonizar.py --demo dados_demo`). |
 
 ## How to run
 
