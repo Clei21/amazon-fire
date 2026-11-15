@@ -1,0 +1,260 @@
+{
+  "bbox": null,
+  "celula_graus": 0.01,
+  "razao_geral": 3.355,
+  "razoes_mensais": {
+    "jan": 4.51,
+    "fev": 4.828,
+    "mar": 4.961,
+    "abr": 4.434,
+    "mai": 5.989,
+    "jun": 4.908,
+    "jul": 3.448,
+    "ago": 2.975,
+    "set": 3.115,
+    "out": 3.568,
+    "nov": 3.534,
+    "dez": 3.301
+  },
+  "razao_geral_snpp_noaa20": 0.995,
+  "razoes_mensais_snpp_noaa20": {
+    "jan": 1.13,
+    "fev": 1.218,
+    "mar": 0.9,
+    "abr": 0.862,
+    "mai": 1.008,
+    "jun": 1.03,
+    "jul": 0.999,
+    "ago": 0.995,
+    "set": 0.996,
+    "out": 0.997,
+    "nov": 0.975,
+    "dez": 0.936
+  },
+  "razao_geral_terra_aqua": 6.73,
+  "razoes_mensais_terra_aqua": {
+    "jan": 6.856,
+    "fev": 10.172,
+    "mar": 6.413,
+    "abr": 8.768,
+    "mai": 9.572,
+    "jun": 14.232,
+    "jul": 19.117,
+    "ago": 11.886,
+    "set": 5.555,
+    "out": 5.321,
+    "nov": 7.49,
+    "dez": 8.82
+  },
+  "validacao_terra": {
+    "anos": [
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019
+    ],
+    "r_anual": 0.872,
+    "erro_medio_anual_pct": 39.7
+  },
+  "anos_climatologia": [
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "validacao": {
+    "anos": [
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "r_anual": 0.993,
+    "r_mensal": 0.988,
+    "erro_medio_anual_pct": 6.7,
+    "por_ano": [
+      {
+        "ano": 2013,
+        "viirs_obs": 6333,
+        "previsto_modis": 5925.6
+      },
+      {
+        "ano": 2014,
+        "viirs_obs": 6714,
+        "previsto_modis": 6890.4
+      },
+      {
+        "ano": 2015,
+        "viirs_obs": 16097,
+        "previsto_modis": 15436.4
+      },
+      {
+        "ano": 2016,
+        "viirs_obs": 6210,
+        "previsto_modis": 6186.6
+      },
+      {
+        "ano": 2017,
+        "viirs_obs": 6134,
+        "previsto_modis": 5693.7
+      },
+      {
+        "ano": 2018,
+        "viirs_obs": 7825,
+        "previsto_modis": 7282.1
+      },
+      {
+        "ano": 2019,
+        "viirs_obs": 5145,
+        "previsto_modis": 4795.0
+      },
+      {
+        "ano": 2020,
+        "viirs_obs": 7163,
+        "previsto_modis": 6341.1
+      },
+      {
+        "ano": 2021,
+        "viirs_obs": 4739,
+        "previsto_modis": 5005.0
+      },
+      {
+        "ano": 2022,
+        "viirs_obs": 6793,
+        "previsto_modis": 7417.7
+      },
+      {
+        "ano": 2023,
+        "viirs_obs": 16950,
+        "previsto_modis": 17445.8
+      },
+      {
+        "ano": 2024,
+        "viirs_obs": 8694,
+        "previsto_modis": 9207.7
+      },
+      {
+        "ano": 2025,
+        "viirs_obs": 3434,
+        "previsto_modis": 2809.9
+      }
+    ]
+  },
+  "validacao_noaa20": {
+    "anos": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "r_anual": 0.996,
+    "r_mensal": 0.995,
+    "erro_medio_anual_pct": 4.9,
+    "por_ano": [
+      {
+        "ano": 2019,
+        "viirs_obs": 5145,
+        "previsto_modis": 4750.9
+      },
+      {
+        "ano": 2020,
+        "viirs_obs": 7163,
+        "previsto_modis": 6968.1
+      },
+      {
+        "ano": 2021,
+        "viirs_obs": 4739,
+        "previsto_modis": 4492.7
+      },
+      {
+        "ano": 2022,
+        "viirs_obs": 6793,
+        "previsto_modis": 7078.9
+      },
+      {
+        "ano": 2023,
+        "viirs_obs": 16950,
+        "previsto_modis": 16759.4
+      },
+      {
+        "ano": 2024,
+        "viirs_obs": 8694,
+        "previsto_modis": 9527.5
+      },
+      {
+        "ano": 2025,
+        "viirs_obs": 3434,
+        "previsto_modis": 3299.5
+      }
+    ]
+  },
+  "mes_atual": {
+    "ano": 2026,
+    "mes": 11,
+    "ate_dia": 7,
+    "atual": 189.2,
+    "mediana_mesmo_periodo": 222.0,
+    "razao": 0.85
+  },
+  "cobertura": {
+    "MODIS": [
+      "2000-11",
+      "2026-11",
+      "2026-11-07"
+    ],
+    "VIIRS": [
+      "2012-02",
+      "2026-10",
+      "2026-11-01"
+    ],
+    "N20": [
+      "2018-05",
+      "2026-11",
+      "2026-11-07"
+    ]
+  }
+}

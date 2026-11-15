@@ -1,0 +1,163 @@
+/* =====================================================================
+   TEMA SLIDES — identidade da apresentação (cacau, telha, laranja)
+   Camada só de CSS, aplicada por cima do site. Não altera o HTML nem o JS.
+   Remover este bloco <style id="tema-slides"> devolve o visual anterior.
+   ===================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700;800;900&family=Lato:wght@400;700;900&display=swap");
+
+:root{
+  --cacau:#2a0f0a; --cacau-2:#3a1710; --marrom:#4a1a12; --telha:#b4501f; --laranja:#f07a1e; --creme:#fbf6f2;
+  --font-head:"League Spartan","Poppins","Segoe UI",system-ui,sans-serif;
+  --font-ui:Lato,"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+  --app:#ffffff; --surface:#ffffff; --surface-2:var(--creme); --surface-3:#f4e8df;
+  --ink:#2a0f0a; --ink-2:#5c3a30; --muted:#7a5a50;
+  --line:#efdcd0; --line-2:#e0c3b2; --grid:#f3e6dd; --axis:#e0c3b2;
+  --brand:#b4501f; --brand-2:#fbe6d8; --brand-ink:#ffffff; --brand-dark:#2a0f0a;
+  --focus:#d9601c; --top:#ffffff; --sel:#b4501f; --zero:#f6ebe4; --pressed-bg:#fbe6d8;
+  --s-harm:#4a1a12;
+  --shadow:none; --r:18px;
+}
+:root[data-theme="dark"]{
+  --app:#1e0b07; --surface:#2a0f0a; --surface-2:#241009; --surface-3:#3a1710;
+  --ink:#fbefe8; --ink-2:#e6cfc3; --muted:#c4a597;
+  --line:#4a2216; --line-2:#6a3322; --grid:#3a1a10; --axis:#6a3322;
+  --brand:#f59a52; --brand-2:#3a1710; --brand-ink:#2a0f0a; --brand-dark:#1a0805;
+  --focus:#ffb070; --top:#1e0b07; --sel:#f59a52; --zero:#33140c; --pressed-bg:#3a1710;
+  --s-harm:#ffd9bf;
+}
+
+/* ---------- tipografia ---------- */
+body{font-family:var(--font-ui)!important}
+.sec h2.t{font-family:var(--font-head)!important;font-weight:900!important;text-transform:uppercase;letter-spacing:0!important;line-height:1!important;font-size:clamp(30px,3.6vw,48px)!important;color:var(--marrom)}
+:root[data-theme=dark] .sec h2.t{color:var(--ink)}
+.panel h3,.lab-head h3,.lab-side h3,.season-chart-header h3,.atlas-timeline-head h3,.compare-head h3,.seas-head h3,.doc h2,.us h3,.m3-card h4{font-family:var(--font-head)!important;font-weight:800!important}
+.dcol .val,.lab-metric strong,.atlas-stat strong,.hero-proof strong,.m3-card .yrs{font-family:var(--font-head)!important;font-weight:800!important}
+.dcol .val,.lab-metric strong{color:var(--brand)!important}
+
+/* ---------- barra superior ---------- */
+.top .name{font-family:var(--font-head)!important;font-weight:900!important;font-size:19px!important;color:var(--marrom)!important;letter-spacing:.01em!important;text-transform:uppercase}
+:root[data-theme=dark] .top .name{color:var(--ink)!important}
+.top .links a{font-weight:700!important;color:var(--marrom)!important}
+:root[data-theme=dark] .top .links a{color:var(--ink-2)!important}
+.top .links a:hover{color:var(--telha)!important;border-bottom-color:var(--laranja)!important}
+.top .lang{border:1.5px solid var(--telha)!important;border-radius:999px!important;background:transparent!important;padding:0!important;overflow:hidden}
+.top .lang button{color:var(--telha)!important;font-weight:800!important;border-radius:0!important}
+.top .lang button[aria-pressed=true]{background:var(--telha)!important;color:#fff!important}
+.top .iconbtn{color:var(--telha)!important}
+
+/* ---------- abertura: mesmo layout de antes, só nas cores dos slides ---------- */
+.hero .bg img,.hero .bg canvas{filter:grayscale(1) contrast(1.15) sepia(1) saturate(6) hue-rotate(-38deg) brightness(.7)}
+.hero .bg::after{background:linear-gradient(90deg,rgba(42,8,6,.92) 0%,rgba(60,10,8,.72) 42%,rgba(120,16,10,.12) 80%),linear-gradient(0deg,rgba(42,8,6,.6),transparent 50%)!important}
+.hero h1{font-family:var(--font-head)!important;font-weight:900!important;letter-spacing:-.005em!important;line-height:1.02!important}
+.hero p.lead{color:#f1e3dc!important}
+.hero .cta a.go{background:var(--telha)!important;border:2px solid var(--telha)!important;color:#fff!important;border-radius:10px!important;font-weight:900!important}
+.hero .cta a.go:hover{background:#9c4318!important;border-color:#9c4318!important}
+.hero .cta a.ghost{border-radius:10px!important;font-weight:900!important;border:2px solid rgba(255,255,255,.75)!important}
+.hero-proof{border-top:3px dotted var(--laranja)!important}
+.hero-proof strong{color:#ffb070!important}
+.hero-proof small{color:#e6cfc3!important}
+.hero .credit{background:rgba(42,15,10,.6)!important;color:#ffd9bf!important}
+
+/* ---------- botões, chips e cartões ---------- */
+.btn,.chipbtn{border-radius:10px!important;font-weight:700!important}
+.btn.primary,.chipbtn[aria-pressed=true],.atlas-regions .chipbtn[aria-pressed=true]{background:var(--telha)!important;border-color:var(--telha)!important;color:#fff!important}
+.seg,.lab-switch{border-radius:10px!important}
+.seg input:checked+span,.lab-switch button[aria-pressed=true],.atlas-map .mapstyle button[aria-pressed=true],.atlas-map .maplayer button[aria-pressed=true]{background:var(--telha)!important;color:#fff!important}
+.panel,.atlas-location,.atlas-below,.season-chart-panel,.lab-graph,.lab-side,details.valid,.doc,.full-cal-panel,.compare-panel,.season-panel,.us-access,.m3-card{border:2px solid var(--line)!important;box-shadow:none!important;border-radius:var(--r)!important}
+.atlas-timeline-pane{border:0!important}
+.atlas-stage{box-shadow:none!important;border:2px solid var(--line)!important}
+.coverage-info{border-left:4px solid var(--laranja)!important}
+.lab-takeaway{border-left:4px solid var(--laranja)!important;border-radius:10px!important}
+.mp-play[aria-pressed=true]{background:var(--laranja)!important;color:var(--cacau)!important}
+.mp-m[aria-checked=true] i{background:var(--telha)!important}
+
+/* ---------- temporada ---------- */
+.dcol,.dcol+.dcol{border-top:3px dotted var(--laranja)!important}
+.season-brief .now-line b{color:var(--telha)!important}
+.season-brief .now-line p .ban-p{border-left-color:var(--laranja)!important}
+
+/* ---------- "Para quem": fundo cacau, como o slide 2 ---------- */
+#users{background:var(--cacau)!important;color:#fff;position:relative;overflow:hidden}
+#users h2.t{color:#fff!important}
+#users p.d{color:#f1e3dc!important}
+#users .us{border-top:0!important;border-left:3px dotted var(--laranja);padding:0 0 0 22px!important}
+#users .us h3{color:#fff!important}
+#users .us p{color:#f1e3dc!important}
+#users .us a{color:var(--laranja)!important}
+#users .us-access{background:var(--cacau-2)!important;border:2px solid #5a2618!important}
+#users .us-access h3{color:#fff}
+#users .us-access ul{color:#f1e3dc!important}
+
+/* ---------- método ---------- */
+.steps li::before{border-radius:12px!important;background:var(--telha)!important;color:#fff!important}
+.steps li,.steps li+li{border:2px solid var(--line)!important;box-shadow:none!important}
+
+/* ---------- equipe ---------- */
+.team-big .m .ini{background:var(--telha)!important;color:#fff!important;font-family:var(--font-head)!important;font-weight:900!important}
+.team-big .m .n{font-weight:800!important;color:var(--marrom)!important}
+:root[data-theme=dark] .team-big .m .n{color:var(--ink)!important}
+
+/* ---------- rodapé ---------- */
+footer.site{background:var(--cacau)!important;color:#f1e3dc!important;border-top:4px solid var(--laranja)}
+.skip{color:var(--telha)!important}
+
+/* ---------- datas da temporada como linha do tempo (Manaus e Brasil) ---------- */
+.dates,#brasil .b-dates{position:relative!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:0!important;
+  background:transparent!important;border:0!important;border-radius:0!important;padding:8px 0 0!important;margin:48px 0 40px!important}
+.dates::before,#brasil .b-dates::before{content:"";position:absolute;left:9px;right:0;top:17px;height:6px;border-radius:3px;
+  background:linear-gradient(90deg,#fbd3b0 0%,var(--laranja) 35%,var(--telha) 50%,var(--laranja) 65%,#fbd3b0 100%)}
+.dcol,.dcol+.dcol,#brasil .b-dates article{position:relative;border:0!important;background:transparent!important;padding:40px 18px 0 0!important;box-shadow:none!important}
+.dcol::before,#brasil .b-dates article::before{content:"";position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--surface);border:5px solid var(--laranja);box-sizing:border-box}
+.dcol-peak::before,#brasil .b-dates article:nth-child(2)::before{width:30px;height:30px;top:-3px;left:-3px;background:var(--telha);border-color:var(--surface);box-shadow:0 0 0 4px var(--telha)}
+.dcol .lbl,#brasil .b-dates .b-l{display:inline-block;font-size:12.5px!important;font-weight:900!important;color:var(--telha)!important;background:var(--brand-2);border-radius:999px;padding:2px 10px;margin-bottom:6px}
+.dcol .val,#brasil .b-dates .b-v{font-family:var(--font-head)!important;font-weight:900!important;font-size:clamp(24px,2.4vw,32px)!important;color:var(--marrom)!important;margin:4px 0 8px!important;line-height:1.05!important}
+:root[data-theme=dark] .dcol .val,:root[data-theme=dark] #brasil .b-dates .b-v{color:var(--ink)!important}
+.dcol-peak .val,#brasil .b-dates article:nth-child(2) .b-v{color:var(--telha)!important}
+:root[data-theme=dark] .dcol-peak .val{color:var(--brand)!important}
+.dcol .rng,#brasil .b-dates p{font-size:13.5px!important;line-height:1.5!important;color:var(--muted)!important;max-width:30ch}
+@media (max-width:760px){
+  .dates,#brasil .b-dates{grid-template-columns:1fr!important;padding:8px 0 0!important;row-gap:28px!important}
+  .dates::before,#brasil .b-dates::before{left:9px;right:auto;top:18px;bottom:40px;width:6px;height:auto;
+    background:linear-gradient(180deg,#fbd3b0 0%,var(--laranja) 35%,var(--telha) 50%,var(--laranja) 65%,#fbd3b0 100%)}
+  .dcol,.dcol+.dcol,#brasil .b-dates article{padding:0 0 0 44px!important}
+  .dcol-peak::before,#brasil .b-dates article:nth-child(2)::before{left:-3px}
+}
+
+/* ---------- Método: a história do registro em etapas ---------- */
+#method .steps{display:block!important;max-width:780px;margin:44px 0 40px!important;border:0!important}
+#method .steps li,#method .steps li+li{position:relative;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0 0 44px 88px!important}
+#method .steps li::before{position:absolute;left:0;top:-4px;width:56px!important;height:56px!important;border-radius:16px!important;margin:0!important;
+  display:flex!important;align-items:center;justify-content:center;font-size:24px!important;font-weight:900!important;background:var(--telha)!important;color:#fff!important}
+#method .steps li::after{content:"";position:absolute;left:26px;top:62px;bottom:6px;border-left:3px dotted var(--laranja)}
+#method .steps li:last-child{padding-bottom:0!important}
+#method .steps li:last-child::after{display:none}
+#method .steps b{display:block;font-family:var(--font-head)!important;font-weight:900!important;font-size:24px!important;line-height:1.15;color:var(--marrom);margin:0 0 8px}
+:root[data-theme=dark] #method .steps b{color:var(--ink)}
+#method .steps span{font-size:17px!important;line-height:1.65!important;color:var(--ink-2)!important}
+#method details.valid{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;margin:0 0 8px 88px!important;max-width:692px}
+#method details.valid[open]{max-width:none;margin-left:0!important}
+#method details.valid summary{padding:0!important;font-weight:800;color:var(--telha)}
+#method .cols2{gap:44px!important;margin-top:56px!important}
+#method .cols2 .doc{background:transparent!important;border:0!important;border-top:3px dotted var(--laranja)!important;border-radius:0!important;box-shadow:none!important;padding:22px 0 0!important}
+#method .cols2 .doc h2{font-family:var(--font-head)!important;font-weight:900!important;font-size:22px!important}
+@media (max-width:760px){
+  #method .steps li,#method .steps li+li{padding-left:68px!important}
+  #method .steps li::before{width:46px!important;height:46px!important;font-size:20px!important}
+  #method .steps li::after{left:21px;top:52px}
+  #method details.valid{margin-left:0!important}
+}
+
+/* ---------- seção Brasil: etiquetas da linha do tempo em neutro ---------- */
+#brasil .b-dates .b-l{color:var(--ink)!important;background:var(--surface-3)!important}
+/* ---------- celular: nome do site não encosta no seletor de idioma; legenda da foto cabe na tela ---------- */
+@media (max-width:560px){
+  .top .name{font-size:14px!important;letter-spacing:0!important;gap:8px!important;min-width:0}
+  .top .name #headerRegion{display:none!important}
+  .top .name img.logo{width:30px!important;height:auto!important}
+  .top .right{flex:0 0 auto}
+}
+@media (max-width:380px){.top .name{font-size:12.5px!important}}
+@media (max-width:760px){
+  .hero .credit{left:var(--pad)!important;right:var(--pad)!important;max-width:none!important;white-space:normal!important;border-radius:10px!important;line-height:1.4!important}
+}
+

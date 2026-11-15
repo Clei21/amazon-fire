@@ -1,0 +1,139 @@
+/* Seção "E no Brasil inteiro?" — estilo jornalístico
+   Escala de espaço: 8 / 16 / 24 / 32 / 48 / 64 px
+   Tipos: títulos em --font-head (h2 40, h3 22, h4 16); texto em --font-ui (16, nota 13)
+   Interface em neutro (--ink / --app); paleta de fogo só nos dados (--fire, rampas dos mapas) */
+:root{--head:var(--font-head,"Poppins","Segoe UI",system-ui,sans-serif);--ui:var(--font-ui,"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif);
+  --fire:#c4482a;--land:#efe6df;--bar:#e3d3c9;--rb:6px}
+:root[data-theme=dark]{--fire:#f08a5a;--land:#3a2219;--bar:#5a3a2e}
+/* regras globais herdadas do arquivo original (afetam outras seções; mantidas iguais) */
+select{border:1px solid var(--line-2);border-radius:10px;background:var(--surface);color:var(--ink);padding:7px 10px;font:inherit;font-size:14px}
+footer{background:var(--brand-dark);color:#c9d9ec;padding:26px 0;font-size:13.5px}
+footer .b-wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:#fff}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.b-logo{height:36px;width:auto;display:block}.b-lw{display:none}:root[data-theme=dark] .b-lc{display:none}:root[data-theme=dark] .b-lw{display:block}
+
+#brasil h2.t{font-family:var(--head)!important;text-transform:uppercase!important;font-weight:900!important;font-size:clamp(30px,3.6vw,48px)!important;line-height:1!important;letter-spacing:0!important;margin:0 0 8px!important;color:var(--ink)!important}
+#brasil h3,#brasil h4{font-family:var(--head)}
+#brasil .b-lead{font-size:18px;line-height:1.5;color:var(--ink-2);max-width:62ch;margin:0 0 32px}
+#brasil .b-sub2{font-weight:800;font-size:22px;line-height:1.2;margin:64px 0 16px;color:var(--ink)}
+#brasil .b-src,#brasil .b-note,#brasil .b-hint{font-size:13px;line-height:1.5;color:var(--muted);max-width:90ch;margin:8px 0 0}
+
+/* ---------- topo: dois mini gráficos ---------- */
+.b-duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}
+.b-mini{margin:0}
+.b-mini figcaption{font-family:var(--head);font-weight:800;font-size:18px;color:var(--ink);margin:0 0 8px}
+@media (max-width:760px){.b-duo{grid-template-columns:1fr;gap:32px}}
+.b-bars{display:block;overflow:visible}
+.b-bars text{font-family:var(--ui);font-size:12px;fill:var(--muted)}
+.b-bars text.b-y26{fill:var(--ink);font-weight:700}
+.b-bars text.b-ann26{fill:var(--ink);font-weight:700;font-size:13px}
+.b-bars text.b-ann{fill:var(--ink-2);font-size:12px}
+
+/* ---------- controles ---------- */
+.b-controls{display:flex;flex-direction:column;gap:16px;margin:0 0 24px}
+#br_presets{display:flex;flex-wrap:wrap;gap:16px 32px}
+.b-chipgroup{display:flex;flex-direction:column;gap:8px}
+.b-glabel{font-size:13px;font-weight:700;color:var(--muted)}
+.b-chips{display:flex;gap:8px;flex-wrap:wrap}
+.b-chip{border:1px solid var(--line-2);background:var(--surface);border-radius:999px;padding:8px 16px;font:500 14px var(--ui);cursor:pointer;color:var(--ink);min-height:40px}
+.b-chip:hover{border-color:var(--ink)}
+.b-chip[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--app);font-weight:700}
+.b-cofold summary{cursor:pointer;font-size:14px;font-weight:700;color:var(--ink);text-decoration:underline;text-underline-offset:3px;width:max-content;list-style-position:inside}
+.b-cofold[open] summary{margin-bottom:16px}
+#brasil .b-coords{display:flex;flex-wrap:wrap;align-items:flex-end;gap:16px;margin:0;font-size:13px;color:var(--ink-2)}
+#brasil .b-coords label{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:700}
+#brasil .b-coords input,#brasil .b-coords select{font:inherit;font-weight:400;font-size:14px;color:var(--ink);background:var(--surface);border:1px solid var(--line-2);border-radius:var(--rb);padding:8px 10px;width:112px;min-height:40px}
+#brasil .b-coords select{width:auto}
+#brasil .b-coerr{align-self:center;color:#a3211a;font-size:13px}
+:root[data-theme=dark] #brasil .b-coerr{color:#f2b8b5}
+
+/* ---------- segmentados, botões ---------- */
+.b-seg{display:inline-flex;border:1px solid var(--line-2);border-radius:var(--rb);overflow:hidden;background:var(--surface)}
+.b-seg button{border:0;background:transparent;padding:8px 14px;font:500 14px var(--ui);cursor:pointer;color:var(--ink);min-height:38px}
+.b-seg button+button{border-left:1px solid var(--line-2)}
+.b-seg button[aria-pressed=true]{background:var(--ink);color:var(--app);font-weight:700}
+#brasil select{border:1px solid var(--line-2);border-radius:var(--rb);background:var(--surface);color:var(--ink);padding:8px 10px;font:inherit;font-size:14px;min-height:40px}
+.b-btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line-2);background:var(--surface);border-radius:var(--rb);padding:8px 16px;cursor:pointer;font:600 14px var(--ui);color:var(--ink);text-decoration:none;min-height:40px}
+.b-btn:hover{border-color:var(--ink)}
+.b-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+
+/* ---------- mapa ---------- */
+.b-explore{display:grid;grid-template-columns:minmax(0,1fr);gap:32px;align-items:start}
+@media (min-width:960px){.b-explore{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px}}
+.b-mapbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 8px}
+.b-mapcard{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:var(--rb);background:var(--surface)}
+#br_map{display:block;width:100%;aspect-ratio:1/0.98;height:auto;max-height:680px;touch-action:none;cursor:grab}
+#br_map.b-draw{cursor:crosshair}
+.b-tools{position:absolute;top:8px;right:8px;display:flex;gap:8px;align-items:center;z-index:2}
+.b-tools .b-seg{box-shadow:0 1px 2px rgba(42,15,10,.12)}
+.b-zoom{display:inline-flex;border:1px solid var(--line-2);border-radius:var(--rb);overflow:hidden;background:var(--surface);box-shadow:0 1px 2px rgba(42,15,10,.12)}
+.b-zoom button{width:38px;height:38px;border:0;background:transparent;cursor:pointer;font-size:18px;line-height:1;color:var(--ink)}
+.b-zoom button+button{border-left:1px solid var(--line-2)}
+.b-zoom button:hover,.b-seg button:hover{background:var(--surface-2)}
+.b-seg button[aria-pressed=true]:hover{background:var(--ink)}
+.b-drawhint{position:absolute;left:8px;top:8px;z-index:2;background:var(--ink);color:var(--app);font-size:13px;font-weight:700;padding:8px 12px;border-radius:var(--rb);max-width:calc(100% - 290px)}
+.b-drawhint[hidden]{display:none}
+@media (max-width:560px){.b-drawhint{top:auto;bottom:8px;max-width:none;right:8px}}
+.b-loading{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:14px;background:var(--surface)}
+
+/* legendas: cada faixa embaixo da sua cor, sem moldura */
+.b-legend{margin:16px 0 0;font-size:13px;color:var(--ink-2)}
+.b-legend b{display:block;color:var(--ink);font-weight:700;margin:0 0 8px}
+.b-keys{list-style:none;margin:0;padding:0;display:flex;gap:2px;max-width:560px}
+.b-keys li{display:flex;flex-direction:column;gap:4px;flex:1 1 0;min-width:0}
+.b-keys i{display:block;height:12px;border-radius:2px}
+.b-keys span{font-size:12px;color:var(--ink-2);white-space:nowrap;font-variant-numeric:tabular-nums}
+/* legendas com muitas faixas quebram em duas linhas no celular, para os números não se encavalarem */
+@media (max-width:560px){.b-keys:has(li:nth-child(7)){flex-wrap:wrap;row-gap:8px}.b-keys:has(li:nth-child(7)) li{flex:0 0 calc(20% - 2px)}}
+/* no painel lateral a legenda mensal (9 faixas) quebra em duas linhas em qualquer tela */
+.b-callegend .b-keys:has(li:nth-child(7)){flex-wrap:wrap;row-gap:8px}.b-callegend .b-keys:has(li:nth-child(7)) li{flex:0 0 calc(20% - 2px)}
+/* fundo creme separa esta seção da temporada, que também é branca */
+section#brasil{background:var(--surface-2)!important;border-top:1px solid var(--line)}
+
+/* ---------- painel da área ---------- */
+.b-side h3{font-size:22px;font-weight:800;line-height:1.2;margin:0;color:var(--ink)}
+.b-side .b-sub{font-size:13px;color:var(--muted);margin:4px 0 16px}
+.b-facts{margin:0 0 32px;padding:0;list-style:none}
+.b-facts li{padding:8px 0;border-top:1px solid var(--line);font-size:15px;color:var(--ink-2);line-height:1.5}
+.b-facts li:first-child{border-top:0;padding-top:0}
+.b-facts li b{color:var(--ink);font-weight:700}
+.b-side h4,.b-area2 h4{font-size:16px;font-weight:800;margin:0 0 8px;color:var(--ink)}
+.b-calsvg{display:block}
+.b-calsvg text{font-family:var(--ui);font-size:11px;fill:var(--muted)}
+.b-calsvg text.b-y26{fill:var(--ink);font-weight:700}
+.b-calsvg rect.b-c{cursor:pointer}
+.b-calsvg rect.b-c:hover{stroke:var(--ink);stroke-width:1.5}
+.b-area2{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;margin:48px 0 0;align-items:start}
+@media (max-width:959px){.b-area2{grid-template-columns:minmax(0,1fr);gap:32px}}
+.b-tech summary{cursor:pointer;font-size:14px;font-weight:700;color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.b-tech ul{margin:16px 0 0;padding:0;list-style:none}
+.b-tech li{padding:8px 0;border-top:1px solid var(--line);font-size:14px;color:var(--ink-2);line-height:1.5}
+.b-tech li b{color:var(--ink)}
+.b-conclusion{font-family:var(--head);font-weight:800;font-size:20px;line-height:1.35;color:var(--ink);max-width:56ch;margin:48px 0 0}
+
+/* ---------- Brasil dia a dia e método ---------- */
+.b-daily{margin:24px 0 0}
+#br_daily{display:block;width:100%}
+.b-dates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:8px 0 24px}
+.b-dates .b-l{font-size:14px;color:var(--muted)}
+.b-dates .b-v{font-family:var(--head);font-weight:800;font-size:clamp(24px,2.4vw,32px);line-height:1.15;margin:4px 0}
+.b-dates p{margin:0;font-size:14px;color:var(--ink-2)}
+@media (max-width:760px){.b-dates{grid-template-columns:1fr}}
+#brasil details.b-more{margin-top:48px}
+#brasil details.b-more summary{cursor:pointer;font-weight:700;color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+#brasil details.b-more>div{padding:16px 0 0}
+table.b-t{width:100%;border-collapse:collapse;font-size:14px;margin:16px 0 0}
+table.b-t th{text-align:left;font-weight:700;border-bottom:1.5px solid var(--ink);padding:8px}
+table.b-t td{border-bottom:1px solid var(--line);padding:8px;color:var(--ink-2)}
+.b-cols{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:32px}
+@media (max-width:860px){.b-cols{grid-template-columns:1fr}}
+.b-cols h4{font-size:16px;font-weight:800;margin:0 0 8px}
+.b-cols ul{margin:0;padding-left:18px;color:var(--ink-2)} .b-cols li{margin:8px 0}
+
+/* ---------- tooltip e foco ---------- */
+#br_tip{position:fixed;z-index:100;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--line-2);border-radius:var(--rb);padding:8px 12px;font-size:13px;box-shadow:0 2px 8px rgba(42,15,10,.15);max-width:260px;display:none;line-height:1.45}
+#br_tip b{font-weight:700}
+#br_tip .b-k{color:var(--muted)}
+#brasil :focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

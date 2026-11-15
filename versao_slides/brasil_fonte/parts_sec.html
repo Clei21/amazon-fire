@@ -1,0 +1,57 @@
+<section class="sec" id="brasil"><div class="wrap">
+<h2 class="t" data-t="title"></h2>
+<p class="b-lead" data-t="lead"></p>
+<div class="b-duo">
+  <figure class="b-mini"><figcaption data-t="duoBr"></figcaption><div id="br_miniBr" role="img"></div></figure>
+  <figure class="b-mini"><figcaption data-t="duoMa"></figcaption><div id="br_miniMa" role="img"></div></figure>
+</div>
+<p class="b-src" id="br_duoNote"></p>
+
+<h3 class="b-sub2" data-t="mapT"></h3>
+<div class="b-controls">
+  <div id="br_presets"></div>
+  <details class="b-cofold">
+    <summary data-t="coOpen"></summary>
+    <form class="b-coords" id="br_coords" novalidate>
+      <label><span data-t="coLat"></span><input id="br_lat" type="number" step="0.01" min="-34" max="6" value="-3.12" inputmode="decimal"></label>
+      <label><span data-t="coLon"></span><input id="br_lon" type="number" step="0.01" min="-74" max="-34" value="-60.02" inputmode="decimal"></label>
+      <label><span data-t="coRad"></span><select id="br_rad"><option value="0.5">~55 km</option><option value="1" selected>~110 km</option><option value="2">~220 km</option></select></label>
+      <button class="b-btn" type="submit" data-t="coGo"></button><span class="b-coerr" id="br_coerr" role="status" aria-live="polite"></span>
+    </form>
+  </details>
+</div>
+<div class="b-explore">
+  <div class="b-mapcol">
+    <div class="b-mapbar">
+      <div class="b-seg" id="br_layers" role="group"><button data-l="rec" aria-pressed="true" data-t="lRec"></button><button data-l="anom" aria-pressed="false" data-t="lAnom"></button><button data-l="act" aria-pressed="false" data-t="lAct"></button></div>
+      <select id="br_year" aria-label="Year"></select>
+    </div>
+    <div class="b-mapcard">
+      <canvas id="br_map" aria-label="Map of Brazil"></canvas>
+      <div class="b-loading" id="br_loading" data-t="loading"></div>
+      <div class="b-tools" id="br_tools" role="toolbar">
+        <div class="b-seg" id="br_mode" role="group"><button data-m="pan" aria-pressed="true" data-t="mPan"></button><button data-m="draw" aria-pressed="false" data-t="mDraw"></button></div>
+        <div class="b-zoom"><button id="br_zin" type="button">+</button><button id="br_zout" type="button">−</button><button id="br_zfit" type="button">⤢</button></div>
+      </div>
+      <div class="b-drawhint" id="br_drawhint" data-t="drawHint" hidden></div>
+    </div>
+    <div class="b-legend" id="br_legend"></div>
+    <p class="b-hint" data-t="hint"></p>
+  </div>
+  <aside class="b-side" id="br_side" aria-live="polite"></aside>
+</div>
+<div class="b-area2" id="br_area2"></div>
+<p class="b-conclusion" data-t="concl"></p>
+
+<h3 class="b-sub2" data-t="natT"></h3><p class="b-lead" data-t="natD"></p>
+<div class="b-dates" id="br_natDates"></div>
+  <div class="b-daily"><canvas id="br_daily" aria-label="Daily burn calendar of Brazil"></canvas><div class="b-legend" id="br_dailyLegend"></div></div>
+
+<details class="b-more"><summary data-t="metT"></summary><div><p class="b-lead" data-t="metD"></p><table class="b-t" id="br_valTable"></table>
+  <div class="b-cols">
+    <div><h4 data-t="howT"></h4><ul id="br_howList"></ul></div>
+    <div><h4 data-t="limT"></h4><ul id="br_limList"></ul></div>
+  </div>
+</div></details>
+</div></section>
+<div id="br_tip" role="tooltip"></div>

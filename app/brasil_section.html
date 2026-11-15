@@ -1,0 +1,143 @@
+<style>
+:root{--head:"Poppins","Segoe UI",system-ui,sans-serif;--ui:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;--fire:#c4482a;--land:#e4e9f0}
+:root[data-theme=dark]{--fire:#f08a5a;--land:#1b2d43}
+#brasil .b-lead{font-size:16.5px;color:var(--ink-2);max-width:720px;margin:0 0 6px}
+#brasil h3,#brasil h4{font-family:var(--font-head,"Poppins",sans-serif)}
+#brasil .b-sub2{font-weight:600;font-size:clamp(22px,2.2vw,28px);margin:56px 0 8px}
+#brasil details.b-more{margin-top:28px;border:1px solid var(--line);border-radius:16px;background:var(--surface);padding:0}
+#brasil details.b-more summary{cursor:pointer;padding:16px 22px;font-weight:600;color:var(--brand)}
+#brasil details.b-more>div{padding:0 22px 22px}
+.b-insight{margin:30px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.b-insight article{border-top:2px solid var(--ink);padding-top:14px}
+.b-insight .b-big{font-family:var(--head);font-weight:600;font-size:clamp(24px,2.6vw,32px);line-height:1.15}
+.b-insight article.hot .b-big{color:var(--fire)}
+.b-insight p{margin:8px 0 0;color:var(--ink-2)}
+.b-insight .b-note{grid-column:1/-1;margin:0;color:var(--ink-2);font-size:15.5px}
+@media (max-width:760px){.b-insight{grid-template-columns:1fr}}
+.b-sec{padding:56px 0}
+.b-sec.alt{background:var(--surface-2)}
+.b-sec h2{font-weight:600;font-size:clamp(26px,2.8vw,36px);line-height:1.2;margin:0 0 10px}
+.b-sec p.d{color:var(--ink-2);font-size:16.5px;max-width:720px;margin:0 0 26px}
+.b-toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.b-chips{display:flex;gap:8px;flex-wrap:wrap}
+.b-chip{border:1px solid var(--line-2);background:var(--surface);border-radius:999px;padding:8px 15px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink-2)}
+.b-chip:hover{border-color:var(--brand);color:var(--brand)}
+.b-chip[aria-pressed=true]{background:var(--brand);border-color:var(--brand);color:#fff}
+:root[data-theme=dark] .b-chip[aria-pressed=true]{color:#0b1a2b}
+.b-seg{display:inline-flex;border:1px solid var(--line-2);border-radius:999px;overflow:hidden;background:var(--surface)}
+.b-seg button{border:0;background:transparent;padding:8px 15px;font-size:13.5px;cursor:pointer;color:var(--ink-2)}
+.b-seg button[aria-pressed=true]{background:var(--brand);color:#fff;font-weight:600}
+:root[data-theme=dark] .b-seg button[aria-pressed=true]{color:#0b1a2b}
+select{border:1px solid var(--line-2);border-radius:10px;background:var(--surface);color:var(--ink);padding:7px 10px;font:inherit;font-size:14px}
+.b-explore{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(330px,1fr);gap:20px;align-items:start}
+@media (max-width:1060px){.b-explore{grid-template-columns:1fr}}
+.b-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+.b-mapcard{position:relative;overflow:hidden}
+#br_map{display:block;width:100%;height:640px;touch-action:none;cursor:grab}
+#br_map.draw{cursor:crosshair}
+@media (max-width:760px){#br_map{height:470px}}
+.b-maptop{position:absolute;left:14px;top:14px;right:14px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;pointer-events:none}
+.b-maptop>*{pointer-events:auto;box-shadow:var(--shadow)}
+.b-zoom{position:absolute;right:14px;bottom:70px;display:flex;flex-direction:column;gap:6px}
+.b-zoom button{width:38px;height:38px;border-radius:10px;border:1px solid var(--line-2);background:var(--surface);cursor:pointer;font-size:18px;line-height:1;box-shadow:var(--shadow)}
+.b-legend{position:absolute;left:14px;bottom:14px;right:64px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:12.5px;color:var(--ink-2);display:flex;gap:10px;flex-wrap:wrap;align-items:center;box-shadow:var(--shadow)}
+.b-legend .b-sw{display:inline-flex;gap:2px;align-items:center}
+.b-legend .b-sw i{display:inline-block;width:20px;height:10px;border-radius:2px}
+.b-legend b{color:var(--ink);font-weight:600}
+.b-hint{font-size:12.5px;color:var(--muted);margin:8px 2px 0}
+.b-side{padding:22px 22px 18px}
+.b-side h3{font-size:20px;font-weight:500;line-height:1.25}
+.b-side .b-sub{font-size:13px;color:var(--muted);margin:4px 0 14px}
+.b-facts{margin:0 0 16px;padding:0;list-style:none}
+.b-facts li{padding:8px 0;border-top:1px solid var(--line);font-size:14.5px;color:var(--ink-2);line-height:1.45}
+.b-facts li b{color:var(--ink);font-weight:600}
+.b-facts li .b-hot{color:var(--fire);font-weight:600}
+.b-side h4{font-size:14.5px;font-weight:500;margin:14px 0 6px}
+.b-calsvg text{font-family:var(--ui);font-size:10px;fill:var(--muted)}
+.b-calsvg rect.c{cursor:pointer}
+.b-calsvg rect.c:hover{stroke:var(--ink);stroke-width:1.5}
+.b-bars text{font-family:var(--ui);font-size:10px;fill:var(--muted)}
+.b-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line-2);background:var(--surface);border-radius:999px;padding:8px 15px;cursor:pointer;font-size:13.5px;font-weight:500;color:var(--ink)}
+.b-btn:hover{border-color:var(--brand);color:var(--brand)}
+.b-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+#br_tip{position:fixed;z-index:100;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--line-2);border-radius:10px;padding:8px 11px;font-size:12.5px;box-shadow:var(--shadow);max-width:260px;display:none;line-height:1.45}
+#br_tip b{font-weight:600}
+#br_tip .b-k{color:var(--muted)}
+.b-daily{padding:20px}
+#br_daily{display:block;width:100%}
+.b-dates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin:6px 0 28px}
+.b-dates article{border-top:2px solid var(--ink);padding-top:12px}
+.b-dates .b-l{font-size:14px;color:var(--muted)}
+.b-dates .b-v{font-family:var(--head);font-weight:500;font-size:clamp(24px,2.4vw,32px);line-height:1.15;margin:4px 0}
+.b-dates p{margin:0;font-size:14px;color:var(--ink-2)}
+@media (max-width:760px){.b-dates{grid-template-columns:1fr}}
+table.t{width:100%;border-collapse:collapse;font-size:14px}
+table.t th{text-align:left;font-weight:600;border-bottom:1.5px solid var(--ink);padding:8px 10px}
+table.t td{border-bottom:1px solid var(--line);padding:8px 10px;color:var(--ink-2)}
+.b-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media (max-width:860px){.b-cols{grid-template-columns:1fr}}
+.b-cols ul{margin:0;padding-left:18px;color:var(--ink-2)} .b-cols li{margin:6px 0}
+footer{background:var(--brand-dark);color:#c9d9ec;padding:26px 0;font-size:13.5px}
+footer .b-wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:#fff}
+.b-loading{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:14px;background:var(--surface)}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.b-logo{height:36px;width:auto;display:block}.b-lw{display:none}:root[data-theme=dark] .b-lc{display:none}:root[data-theme=dark] .b-lw{display:block}
+
+#brasil .b-coords{display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px;margin:0 0 16px;font-size:14px;color:var(--ink-2)}
+#brasil .b-coords>span:first-child{align-self:center;font-weight:600;color:var(--ink)}
+#brasil .b-coords label{display:flex;flex-direction:column;gap:4px;font-size:12.5px}
+#brasil .b-coords input,#brasil .b-coords select{font:inherit;font-size:14px;color:var(--ink);background:var(--surface);border:1px solid var(--line-2);border-radius:10px;padding:8px 10px;width:118px}
+#brasil .b-coords select{width:auto}
+#brasil .b-coords input:focus-visible,#brasil .b-coords select:focus-visible{outline:2px solid var(--brand);outline-offset:1px}
+#brasil .b-coerr{align-self:center;color:#b3261e;font-size:13px}
+:root[data-theme=dark] #brasil .b-coerr{color:#f2b8b5}
+
+</style>
+<section class="sec" id="brasil"><div class="wrap">
+<h2 class="t" data-t="title"></h2>
+  <p class="b-lead" data-t="lead"></p>
+  <div class="b-insight">
+    <article><div class="b-big" data-t="insBrT"></div><p data-t="insBrD"></p></article>
+    <article class="b-hot"><div class="b-big" data-t="insMaT"></div><p data-t="insMaD"></p></article>
+    <p class="b-note" data-t="insNote"></p>
+  </div>
+
+<div style="height:28px"></div>
+<h3 class="b-sub2" data-t="mapT" style="margin-top:20px"></h3><p class="b-lead" data-t="mapD"></p>
+<div class="b-toolbar"><div class="b-chips" id="br_presets"></div></div><form class="b-coords" id="br_coords" novalidate><span data-t="coT"></span>
+<label><span data-t="coLat"></span><input id="br_lat" type="number" step="0.01" min="-34" max="6" value="-3.12" inputmode="decimal"></label>
+<label><span data-t="coLon"></span><input id="br_lon" type="number" step="0.01" min="-74" max="-34" value="-60.02" inputmode="decimal"></label>
+<label><span data-t="coRad"></span><select id="br_rad"><option value="0.5">~55 km</option><option value="1" selected>~110 km</option><option value="2">~220 km</option></select></label>
+<button class="b-btn" type="submit" data-t="coGo"></button><span class="b-coerr" id="br_coerr" role="status" aria-live="polite"></span></form>
+  <div class="b-explore">
+    <div>
+      <div class="b-card b-mapcard">
+        <canvas id="br_map" aria-label="Map of Brazil"></canvas>
+        <div class="b-loading" id="br_loading" data-t="loading"></div>
+        <div class="b-maptop">
+          <div class="b-seg" id="br_layers"><button data-l="rec" aria-pressed="true" data-t="lRec"></button><button data-l="anom" aria-pressed="false" data-t="lAnom"></button><button data-l="act" aria-pressed="false" data-t="lAct"></button></div>
+          <select id="br_year" aria-label="Year"></select>
+          <div class="b-seg" id="br_mode"><button data-m="pan" aria-pressed="true" data-t="mPan"></button><button data-m="draw" aria-pressed="false" data-t="mDraw"></button></div>
+        </div>
+        <div class="b-zoom"><button id="br_zin" aria-label="Zoom in">+</button><button id="br_zout" aria-label="Zoom out">−</button><button id="br_zfit" aria-label="Fit" style="font-size:13px">⤢</button></div>
+        <div class="b-legend" id="br_legend"></div>
+      </div>
+      <p class="b-hint" data-t="hint"></p>
+    </div>
+    <aside class="b-card b-side" id="br_side" aria-live="polite"></aside>
+  </div>
+
+<h3 class="b-sub2" data-t="natT"></h3><p class="b-lead" data-t="natD"></p>
+<div class="b-dates" id="br_natDates"></div>
+  <div class="b-card b-daily"><canvas id="br_daily" aria-label="Daily burn calendar of Brazil"></canvas><div class="b-legend" style="position:static;box-shadow:none;border:0;padding:10px 0 0" id="br_dailyLegend"></div></div>
+
+<details class="b-more"><summary data-t="metT"></summary><div><p class="b-lead" data-t="metD"></p><table class="b-t" id="br_valTable"></table>
+  <div class="b-cols" style="margin-top:28px">
+    <div><h3 style="font-size:18px;font-weight:500;margin-bottom:8px" data-t="howT"></h3><ul id="br_howList"></ul></div>
+    <div><h3 style="font-size:18px;font-weight:500;margin-bottom:8px" data-t="limT"></h3><ul id="br_limList"></ul></div>
+  </div>
+</div></details>
+</div></section>
+<div id="br_tip" role="tooltip"></div>
