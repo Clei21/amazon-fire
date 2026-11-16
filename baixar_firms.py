@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# AI disclosure: developed with the help of an AI assistant (Claude, Anthropic); reviewed and tested by team Amazonia Fire.
+# AI disclosure: developed with the help of an AI assistant (Claude, Anthropic); reviewed and tested by team Amazon Fire.
 """
 Baixa focos do NASA FIRMS pela API "area" para uma caixa e um período,
 em blocos de poucos dias, juntando tudo num único CSV.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# AI disclosure: developed with the help of an AI assistant (Claude, Anthropic); reviewed and tested by team Amazonia Fire.
+# AI disclosure: developed with the help of an AI assistant (Claude, Anthropic); reviewed and tested by team Amazon Fire.
 """
 Amazon - harmonização de focos ativos MODIS + VIIRS (NASA FIRMS)
 ===========================================================================

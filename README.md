@@ -1,15 +1,15 @@
-# Amazonia Fire
+# Amazon Fire
 
 A harmonized fire calendar built from NASA FIRMS active fire detections (MODIS and VIIRS), November 2000 to 14 November 2026.
 
 NASA Space Apps Challenge 2026, challenge **Harmonization of MODIS and VIIRS Hot Spots**.
-Team Amazonia Fire, Manaus, Brazil: Leonor Joana Ramos Oliveira, Cleidiana Manoel Alves, Cristiana do Nascimento Pedrosa and Josué Rique Oliveira Roberto.
+Team Amazon Fire, Manaus, Brazil: Leonor Joana Ramos Oliveira, Cleidiana Manoel Alves, Cristiana do Nascimento Pedrosa and Josué Rique Oliveira Roberto.
 
-**Live app:** [clei21.github.io/amazonia-fire](https://clei21.github.io/amazonia-fire/) · **Repository:** [github.com/Clei21/amazonia-fire](https://github.com/Clei21/amazonia-fire)
+**Live app:** [clei21.github.io/amazon-fire](https://clei21.github.io/amazon-fire/) · **Repository:** [github.com/Clei21/amazon-fire](https://github.com/Clei21/amazon-fire)
 
 ## What it does
 
-MODIS and VIIRS count fire very differently: VIIRS sees two to three times more fire in the same place and day, so a raw 26-year record jumps every time the sensor changes. Suomi NPP, the VIIRS reference, stopped sending data on 2 November 2026. Amazonia Fire calibrates each satellite hand-off month by month, tests it on years the model never saw, and joins everything into one record.
+MODIS and VIIRS count fire very differently: VIIRS sees two to three times more fire in the same place and day, so a raw 26-year record jumps every time the sensor changes. Suomi NPP, the VIIRS reference, stopped sending data on 2 November 2026. Amazon Fire calibrates each satellite hand-off month by month, tests it on years the model never saw, and joins everything into one record.
 
 With that record, anyone can pick an area (a ready-made region, a drawn rectangle or coordinates) and see:
 
@@ -110,7 +110,7 @@ Active fire detections show fire at the moment a satellite passes; they are not 
 
 ## Resumo em português
 
-O Amazonia Fire junta os focos de calor dos satélites MODIS e VIIRS do NASA FIRMS num registro único de 2000 a 2026. Cada troca de satélite é calibrada mês a mês e testada em anos que o modelo não viu (erro anual de 2% a 8% nas trocas MODIS e NOAA-20). Com esse registro, qualquer pessoa escolhe uma área do Brasil (região, desenho ou coordenadas) e vê quando a temporada de queimadas começa, chega ao pico e termina, onde o fogo volta todo ano e como este ano se compara com o passado. Em 2026, o Brasil teve a temporada mais fraca desde 2001, enquanto a região de Manaus teve a 3ª mais intensa. Para usar, abra o `index.html` no navegador.
+O Amazon Fire junta os focos de calor dos satélites MODIS e VIIRS do NASA FIRMS num registro único de 2000 a 2026. Cada troca de satélite é calibrada mês a mês e testada em anos que o modelo não viu (erro anual de 2% a 8% nas trocas MODIS e NOAA-20). Com esse registro, qualquer pessoa escolhe uma área do Brasil (região, desenho ou coordenadas) e vê quando a temporada de queimadas começa, chega ao pico e termina, onde o fogo volta todo ano e como este ano se compara com o passado. Em 2026, o Brasil teve a temporada mais fraca desde 2001, enquanto a região de Manaus teve a 3ª mais intensa. Para usar, abra o `index.html` no navegador.
 
 ## License
 

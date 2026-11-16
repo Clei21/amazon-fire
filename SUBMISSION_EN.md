@@ -1,4 +1,4 @@
-# Amazonia Fire
+# Amazon Fire
 
 **NASA Space Apps Challenge 2026 · Harmonization of MODIS and VIIRS Hot Spots**
 
@@ -8,7 +8,7 @@ More than two decades of satellite-detected active fire hotspots form a valuable
 
 ## Our solution
 
-Amazonia Fire is an interactive website that constructs a harmonized active-fire time series from NASA FIRMS detections and presents it as a calendar, a map and historical comparison charts. A viewer can select or draw an area of interest, enter coordinates, choose dates, inspect hotspots and export raw detections and harmonized summaries. Manaus and Central Amazon are the initial case study; users can import FIRMS CSVs for other regions.
+Amazon Fire is an interactive website that constructs a harmonized active-fire time series from NASA FIRMS detections and presents it as a calendar, a map and historical comparison charts. A viewer can select or draw an area of interest, enter coordinates, choose dates, inspect hotspots and export raw detections and harmonized summaries. Manaus and Central Amazon are the initial case study; users can import FIRMS CSVs for other regions.
 
 The harmonization lab offers a direct before/after comparison of raw MODIS and VIIRS counts versus MODIS counts calibrated to the VIIRS reference scale. Diagnostics report area-specific calibration ratios and leave-one-year-out validation.
 

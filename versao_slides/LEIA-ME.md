@@ -1,4 +1,4 @@
-# Amazonia Fire — versão com a identidade dos slides
+# Amazon Fire — versão com a identidade dos slides
 
 **Para ver o site:** abra o `index.html` da pasta principal no navegador (Chrome ou Edge). É ele que deve ser publicado.
 

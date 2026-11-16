@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# AI disclosure: developed with the help of an AI assistant (Claude, Anthropic); reviewed and tested by team Amazonia Fire.
+# AI disclosure: developed with the help of an AI assistant (Claude, Anthropic); reviewed and tested by team Amazon Fire.
 """
 Monta o index.html: junta app/site.html + app/motor.js e embute os focos do FIRMS.
 
