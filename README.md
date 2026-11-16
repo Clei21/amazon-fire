@@ -5,7 +5,7 @@ A harmonized fire calendar built from NASA FIRMS active fire detections (MODIS a
 NASA Space Apps Challenge 2026, challenge **Harmonization of MODIS and VIIRS Hot Spots**.
 Team Amazon Fire, Manaus, Brazil: Leonor Joana Ramos Oliveira, Cleidiana Manoel Alves, Cristiana do Nascimento Pedrosa and Josué Rique Oliveira Roberto.
 
-**Live app:** [clei21.github.io/amazon-fire](https://clei21.github.io/amazon-fire/) · **Repository:** [github.com/Clei21/amazon-fire](https://github.com/Clei21/amazon-fire)
+**Live app:** [clei21.github.io/amazon-fire](https://clei21.github.io/amazon-fire/) · **Repository:** [github.com/Clei21/amazon-fire](https://github.com/Clei21/amazon-fire) · **Paper:** [AmazonFire_Article.pdf](docs/AmazonFire_Article.pdf)
 
 ## What it does
 
@@ -66,7 +66,7 @@ Validation (mean yearly error on held-out years):
 | `baixar_firms.py` | Optional downloader for the FIRMS API (needs a free MAP_KEY). |
 | `dados/` | NASA FIRMS files used (archive and near real-time; MODIS C6.1, VIIRS Suomi NPP, VIIRS NOAA-20). |
 | `resultados_manaus/`, `resultados_area_total/` | Outputs of `harmonizar.py` for the Manaus metropolitan area and for the whole downloaded area. |
-| `docs/` | Full article. |
+| `docs/` | Full article ([`AmazonFire_Article.pdf`](docs/AmazonFire_Article.pdf), 15 pages). |
 | `dados_demo/` | Synthetic data in the FIRMS format, used to test the pipeline (`python3 harmonizar.py --demo dados_demo`). |
 
 ## How to run
