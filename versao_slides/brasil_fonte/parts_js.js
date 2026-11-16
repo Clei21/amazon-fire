@@ -37,7 +37,7 @@ pt:{navManaus:"Manaus",navBrazil:"Brasil",navMap:"Mapa",navNational:"O país",na
  vH:["Troca de satélite","Razão geral","Anos testados","Correlação anual","Erro médio anual"],
  howT:"Como funciona", howL:["Filtro de qualidade e remoção de fontes de calor fixas, como em Manaus.","Contagem em células de 1 km por dia, depois somadas em quadrados de 0,5° (cerca de 55 km).","Para a área escolhida, as razões entre satélites são recalculadas mês a mês com os dados dela.","No mapa, cada quadrado usa as razões nacionais, para que todos fiquem na mesma escala."],
  limT:"Limites", limL:["As áreas são retângulos, não limites de estados ou municípios.","Focos ativos mostram fogo na hora da passagem do satélite, não área queimada.","Áreas pequenas têm poucos focos e o calendário fica mais incerto; o erro do teste aparece no painel.","Antes de agosto de 2002 só o satélite Terra observava: esses meses têm confiança menor."],
- footL:"Amazon Fire Calendar, NASA Space Apps Challenge 2026. Dados: NASA FIRMS.", footR:"Voltar ao estudo de Manaus",
+ footL:"Amazonia Fire, NASA Space Apps Challenge 2026. Dados: NASA FIRMS.", footR:"Voltar ao estudo de Manaus",
  mon:["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"], monL:["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],
  near:(km,d,c)=>`${km} km a ${d} de ${c}`, inC:(c)=>`em ${c}`, dirs:["norte","nordeste","leste","sudeste","sul","sudoeste","oeste","noroeste"]},
 en:{navManaus:"Manaus",navBrazil:"Brazil",navMap:"Map",navNational:"The country",navMethod:"Method",loading:"Loading 41.6 million detections…",
@@ -73,7 +73,7 @@ en:{navManaus:"Manaus",navBrazil:"Brazil",navMap:"Map",navNational:"The country"
  vH:["Satellite hand-off","Overall ratio","Years tested","Annual correlation","Mean annual error"],
  howT:"How it works", howL:["Quality filter and removal of fixed heat sources, as for Manaus.","Counts on 1 km cells per day, then summed into 0.5° squares (about 55 km).","For the selected area, the ratios between satellites are recomputed month by month from its own data.","On the map, every square uses the national ratios so that all squares share one scale."],
  limT:"Limits", limL:["Areas are rectangles, not state or municipal boundaries.","Active fire detections show fire at the time of a satellite pass, not burned area.","Small areas have few detections and a less certain calendar; the test error is shown in the panel.","Before August 2002 only Terra observed: those months have lower confidence."],
- footL:"Amazon Fire Calendar, NASA Space Apps Challenge 2026. Data: NASA FIRMS.", footR:"Back to the Manaus study",
+ footL:"Amazonia Fire, NASA Space Apps Challenge 2026. Data: NASA FIRMS.", footR:"Back to the Manaus study",
  mon:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], monL:["January","February","March","April","May","June","July","August","September","October","November","December"],
  near:(km,d,c)=>`${km} km ${d} of ${c}`, inC:(c)=>`in ${c}`, dirs:["north","northeast","east","southeast","south","southwest","west","northwest"]}
 };
@@ -375,7 +375,7 @@ function duo(){
 }
 function csv(A,name){
   const rows=["year,month,harmonized_cell_days,typical_median"]; for(let mi=10;mi<NM;mi++) rows.push(`${yOf(mi)},${mi%12+1},${A.H[mi].toFixed(1)},${A.med[mi%12+1].toFixed(1)}`);
-  const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([rows.join("\n")],{type:"text/csv"})); a.download=`amazon_fire_calendar_${name.toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g,"_")}.csv`; document.body.appendChild(a); a.click(); a.remove();
+  const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([rows.join("\n")],{type:"text/csv"})); a.download=`amazonia_fire_${name.toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g,"_")}.csv`; document.body.appendChild(a); a.click(); a.remove();
 }
 
 /* ---------------------------------------------------------------- national daily calendar */

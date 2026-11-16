@@ -1,4 +1,4 @@
-/* AI disclosure: developed with the help of an AI assistant (Claude, Anthropic); reviewed and tested by team Amazon Fire Calendar. */
+/* AI disclosure: developed with the help of an AI assistant (Claude, Anthropic); reviewed and tested by team Amazonia Fire. */
 /* ======================================================= dados: estrutura */
 /* Fluxos: 0 = MODIS, 1 = VIIRS Suomi NPP (referência), 2 = VIIRS NOAA-20 (continua após 02/11/2026) */
 const N20_START = dayOf(2018,4,1);
